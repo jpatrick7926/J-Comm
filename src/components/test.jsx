@@ -1,3 +1,0 @@
-const testFunct = () => {
-  return "hello"
-}

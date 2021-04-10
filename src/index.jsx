@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import './styles/app.scss';
+import './index-style.scss';
+import Header from './components/header/Header.jsx'
+import Main from './components/main/Main.jsx'
+import Footer from './components/footer/Footer.jsx'
+
 
 class App extends React.Component {
   constructor(props){
@@ -14,7 +18,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        Hello! It works!
+        <Header />
+        <Main />
+        <Footer />
       </div>
     )
   }
