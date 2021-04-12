@@ -29,6 +29,10 @@ var config = {
           // Compiles Sass to CSS
           "sass-loader",
         ]
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       }
     ]
   }
