@@ -1,5 +1,9 @@
 import React from 'react';
-import './header-style.scss'
+import './header-styles/header-style.scss'
+import Nav from './Nav.jsx'
+import '../.././fonts.scss'
+import Icons from './Icons.jsx'
+
 
 class Header extends React.Component {
   constructor(props){
@@ -13,16 +17,15 @@ class Header extends React.Component {
     return (
       <header>
         <div className="nav-container">
-          <div>
-            <h1>Hello from Navbar!</h1>
+          <div className="logo">
+            <span className="logo-text">J-COMM</span>
           </div>
-          <nav>
-            <ul>
-              <li>Button</li>
-              <li>Button</li>
-              <li>Button</li>
-            </ul>
-          </nav>
+          <div className="nav">
+            <Nav />
+          </div>
+          <div className="icons">
+            <Icons />
+          </div>
         </div>
       </header>
     )
