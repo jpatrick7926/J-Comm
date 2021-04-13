@@ -1,0 +1,36 @@
+header {
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 40px 20px 40px;
+}
+
+.logo {
+  flex: 1;
+  // background-color: red;
+  font-size: 26px;
+  font-family: Rubik;
+  color: black;
+}
+
+.logo-text:hover {
+  color: #F3D880;
+  cursor: pointer;
+}
+
+.nav {
+  flex: 1;
+  // background-color: yellow;
+  display:flex;
+  justify-content: space-around;
+}
+
+.icons {
+  flex: 1;
+  // background-color: purple;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,20 @@
+ul {
+  list-style: none;
+  color: black;
+  display: flex;
+  width: 35%;
+  align-items: center;
+}
+
+li {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-family: Rubik;
+  letter-spacing: 0.5px;
+}
+
+li:hover {
+  color: #F3D880;
+  cursor: pointer;
+}
