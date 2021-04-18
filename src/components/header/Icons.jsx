@@ -1,6 +1,6 @@
 import React from 'react';
-import UserLogo from './logos/UserLogo.jsx'
-import CartIcon from './logos/CartIcon.jsx'
+import UserIcon from './icons/UserIcon.jsx'
+import CartIcon from './icons/CartIcon.jsx'
 
 class Icons extends React.Component {
   constructor(props){
@@ -30,7 +30,7 @@ class Icons extends React.Component {
   render() {
     return (
       <div style={{ display: 'flex' }}>
-        <UserLogo hover={this.userHandleHover} fill={this.state.userHovered ? '#F3D880' : '#000'}/>
+        <UserIcon hover={this.userHandleHover} fill={this.state.userHovered ? '#F3D880' : '#000'}/>
         <CartIcon hover={this.cartHandleHover} stroke={this.state.cartHovered ? '#F3D880' : '#000'}/>
       </div>
     )

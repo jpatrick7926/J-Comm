@@ -24,7 +24,7 @@ class Header extends React.Component {
             <Nav />
           </div>
           <div className="icons">
-            <Icons />
+             <Icons />
           </div>
         </div>
       </header>

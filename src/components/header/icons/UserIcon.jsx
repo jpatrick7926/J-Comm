@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const UserLogo = (props) => {
+const UserIcon = (props) => {
   return (
     <div style={{ flexShrink: 0, width: '25px', height: '25px'  }}>
       <a href="#">
@@ -15,4 +15,4 @@ const UserLogo = (props) => {
   )
 }
 
-export default UserLogo;
+export default UserIcon;

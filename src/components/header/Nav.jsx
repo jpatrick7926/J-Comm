@@ -9,7 +9,7 @@ const Nav = () => {
         Shop
       </li>
       <li>
-        Journal
+        Reviews
       </li>
       <li>
         About
