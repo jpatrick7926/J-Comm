@@ -1,5 +1,7 @@
 import React from 'react';
 import Hero from './hero/hero.jsx'
+import About from './about/About.jsx'
+import Featured from './featured/Featured.jsx'
 import './main-style.scss'
 
 class Main extends React.Component {
@@ -14,6 +16,8 @@ class Main extends React.Component {
     return (
       <div className="main">
         <Hero />
+        <About />
+        <Featured />
       </div>
     )
   }
