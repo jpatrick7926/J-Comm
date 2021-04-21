@@ -17,9 +17,9 @@ const Featured = () => {
               <div className="featured-name">
                 <b>Product Name</b>
               </div>
+              {/* Rating system doesn't work yet. Still TBD */}
               <div className="featured-rating">
-                {/* Still need consider the rating system */}
-                <p>&starf;&starf;&starf;&starf;&starf;</p>
+                <p>?Ratings out of 5?</p>
               </div>
               <div className="featured-price">
                 <p>Starting at $999.99</p>
