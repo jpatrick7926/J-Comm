@@ -1,0 +1,20 @@
+.button-cta {
+  text-align: center;
+}
+
+.button-cta a {
+  text-decoration: none;
+  color: #eee;
+  width: 200px;
+  padding: 20px;
+  background-color: #cca869;
+  display: block;
+  margin: 40px auto;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-size: 20px;
+}
+
+.button-cta :hover {
+  background-color: #111111;
+}
