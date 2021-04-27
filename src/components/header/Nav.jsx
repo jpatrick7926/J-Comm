@@ -2,10 +2,11 @@ import React from 'react'
 import './header-styles/nav-style.scss'
 import '../.././fonts.scss'
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <ul>
-      <li>
+      {/* Switches Main content to the shop page */}
+      <li onClick={props.switchToShop}>
         Shop
       </li>
       <li>
