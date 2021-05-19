@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../button/Button.jsx'
+import Button from '../../../button/Button.jsx'
 import './about-styles.scss'
 
 class About extends React.Component {
@@ -47,7 +47,7 @@ class About extends React.Component {
             </p>
           </div>
         </div>
-        <Button />
+        {/* <Button /> */}
       </div>
     )
   }

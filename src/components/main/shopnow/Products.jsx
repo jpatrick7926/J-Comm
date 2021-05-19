@@ -1,33 +1,54 @@
 import React from 'react'
+import Product from './ProductInGrid.jsx'
 
 const productsStyle = {
   width: '100%',
-  backgroundColor: 'pink',
   display: 'flex',
-  flexWrap: 'wrap'
+  flexWrap: 'wrap',
+  justifyContent: 'space-around'
 }
 
-const dummy = () => {
-  return(
-    <div style={{minWidth:'200px', textAlign: 'center'}}>
-      Product
-    </div>
-  )
-}
+class Products extends React.Component {
+  constructor(props) {
+    super(props)
 
-const Products = () => {
-  return (
-    <div className='products-container' style={productsStyle}>
-      {dummy()}
-      {dummy()}
-      {dummy()}
-      {dummy()}
-      {dummy()}
-      {dummy()}
-      {dummy()}
-      {dummy()}
-    </div>
-  )
+    this.state = {
+      products: [],
+      isLoaded: false
+    }
+  }
+
+  componentDidMount() {
+    fetch('https://fakestoreapi.com/products')
+      .then(res=>res.json())
+      .then(json=>{
+        this.setState({
+          products: json,
+          isLoaded: true
+        })
+      })
+  }
+
+  render () {
+    console.log(this.state.products, 'in render')
+    if (!this.state.isLoaded) {
+      return (
+        <div className='products-container' style={productsStyle}>
+          Loading...
+        </div>
+      )
+    }
+
+    if(this.state.isLoaded) {
+      return (
+        <div className='products-container' style={productsStyle}>
+          {this.state.products.map (product => (
+            <Product selectedProductHandler={this.props.selectedProductHandler} productObj={product} key={product.id} title={product.title} price={product.price} image={product.image}/>
+          ))}
+        </div>
+      )
+    }
+  }
 }
 
 export default Products

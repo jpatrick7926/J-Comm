@@ -1,8 +1,8 @@
 import React from 'react'
 import './hero-style.scss';
-import heroImage from "../../../images/hero-image.jpg";
-import heroImageRes from "../../../images/mada.jpg";
-import '../../../fonts.scss';
+import heroImage from "../../../../images/hero-image.jpg";
+import heroImageRes from "../../../../images/mada.jpg";
+import '../../../../fonts.scss';
 
 const Hero = () => {
   return (

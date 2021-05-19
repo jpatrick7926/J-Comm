@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+  Link
+} from "react-router-dom"
 import './header-styles/nav-style.scss'
 import '../.././fonts.scss'
 
@@ -6,14 +9,18 @@ const Nav = (props) => {
   return (
     <ul>
       {/* Switches Main content to the shop page */}
-      <li onClick={props.switchToShop}>
-        Shop
+      <li>
+        <Link to="/shop">Shop</Link>
       </li>
       <li>
-        Reviews
+        <Link to="/reviews">
+          Reviews
+        </Link>
       </li>
       <li>
-        About
+        <Link to="/about">
+          About
+        </Link>
       </li>
     </ul>
   )
