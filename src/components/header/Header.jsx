@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './header-styles/header-style.scss'
 import Nav from './Nav.jsx'
 import '../.././fonts.scss'
@@ -18,9 +24,9 @@ class Header extends React.Component {
       <header>
         <div className="nav-container">
           <div className="logo">
-            <a onClick={this.props.switchToHome} style={{textDecoration: 'none', color: 'black'}}>
+            <Link to="/" style={{textDecoration: 'none', color: 'black'}}>
               <span className="logo-text">J-COMM</span>
-            </a>
+            </Link>
           </div>
           <div className="nav">
             {/* Pass the switch to shop handler to the Nav component */}

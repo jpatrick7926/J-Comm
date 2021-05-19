@@ -1,4 +1,5 @@
 import React from 'react'
+import Spacer from '../tools/spacer.jsx'
 import './footer-style.scss'
 
 const Footer = () => {
@@ -22,6 +23,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <Spacer height="50px" />
       <p>Copyright © 2021, J-comm.</p>
     </footer>
   )
