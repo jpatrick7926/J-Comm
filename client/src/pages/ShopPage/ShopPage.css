@@ -1,0 +1,31 @@
+.shop-container {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.shop-copytext {
+  margin-bottom: 50px;
+}
+
+.shop-copytext p {
+  margin: 0 auto;
+  max-width: 50%;
+  min-width: 270px;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.products-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 960px) {
+  .shop-container {
+    width: 100%;
+  }
+}

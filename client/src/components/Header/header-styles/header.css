@@ -1,0 +1,47 @@
+.nav-container {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.logo {
+  flex: .33;
+  font-size: 26px;
+  font-family: Rubik;
+  color: black;
+}
+
+.logo-text:hover {
+  color: #F3D880;
+  cursor: pointer;
+}
+
+.nav {
+  flex: .34;
+  display:flex;
+  justify-content: space-around;
+}
+
+.icons {
+  flex: .33;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 960px) {
+  .nav-container {
+    padding: 10px 20px;
+    width: 95%;
+  }
+  .nav {
+    display: none;
+  }
+  .logo {
+    flex: .5;
+  }
+  .icons {
+    flex: .5;
+  }
+}

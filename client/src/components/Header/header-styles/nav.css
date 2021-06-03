@@ -1,0 +1,26 @@
+.nav__ul {
+  list-style: none;
+  color: black;
+  display: flex;
+  /* width: 35%; */
+  align-items: center;
+}
+
+.nav__ul > li {
+  flex: 1;
+  min-width: 75px;
+  text-align: center;
+  font-weight: 600;
+  font-family: Rubik;
+  letter-spacing: 0.5px;
+}
+
+.nav__ul > li > a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav__ul > li > a:hover {
+  color: #F3D880;
+  cursor: pointer;
+}

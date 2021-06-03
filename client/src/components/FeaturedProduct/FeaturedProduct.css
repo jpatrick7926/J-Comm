@@ -1,0 +1,15 @@
+.featured-description {
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 2;
+}
+
+.featured-name {
+  font-size: 1rem;
+  color: #cca869;
+}
+
+.featured-price {
+  color: #666666;
+}

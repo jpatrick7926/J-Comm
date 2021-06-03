@@ -1,17 +1,19 @@
+require('dotenv').config();
 const express = require('express');
-const path = require('path');
+const connectDB = require('./config/dbConfig.js');
 const app = express();
 
+// Routers
+const productRouter = require('./routes/productRoutes.js');
+
+app.use(express.json());
+app.use('/api/products', productRouter)
 
 
-app.use(express.static(__dirname + '/../dist/app'));
+connectDB();
 
-app.get('/*', function(req,res) {
-	res.sendFile(path.join(__dirname, '/../dist/app/index.html'));
-	});
+const PORT = process.env.PORT || 5000;
 
-let port = process.env.PORT || 8080;
-
-app.listen(port, function() {
-    console.log('listening on port' + port);
-  })
+app.listen(PORT, () => {
+  console.log(`Server is listening on PORT: ${PORT}`);
+})
