@@ -1,11 +1,14 @@
 import './CartItem.css';
 import { Link } from 'react-router-dom';
 
-const CartItem = () => {
+const CartItem = (props) => {
+
+  const cartItemInfo = props.cartItemInfo
+
   return (
     <div className="cartitem">
       <div className='cartitem__left'>
-        <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=708&q=80" alt="temp stuff"/>
+        <img src={props.imageUrl} alt="temp stuff"/>
         <div className="left__buttons">
           <Link className="cartitem__name" to={`/product/60a9c1b2b1196c48141b8ac9`}>
             <p>Red Converse High Tops</p>
