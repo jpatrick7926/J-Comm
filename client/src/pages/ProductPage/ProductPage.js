@@ -1,5 +1,5 @@
 import './productPage.css'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 // Components
@@ -7,10 +7,12 @@ import Button from '../../components/Button/Button.js'
 
 // Actions
 import { getProductDetailsActions } from '../../redux/actions/productActions';
+import { addToCartAction } from '../../redux/actions/cartActions'
 
 const ProductPage = ({match}) => {
   const dispatch = useDispatch();
 
+  const [ qty, setQty ] = useState(1)
   const { product, loading, error } = useSelector(state => state.getProductDetails);
 
   useEffect(() => {
@@ -18,6 +20,10 @@ const ProductPage = ({match}) => {
       dispatch(getProductDetailsActions(match.params.id))
     }
   }, [dispatch, match, product])
+
+  const addToCartHandler = () => {
+    dispatch(addToCartAction(product._id, qty))
+  }
 
   return (
     <div className="product-page-wrapper">
@@ -47,13 +53,15 @@ const ProductPage = ({match}) => {
                 </p>
               </div>
               <div className="add-to-cart-cta">
-                <select>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
+                <select value={qty} onChange={(event) => {setQty(event.target.value)}}>
+                  {
+                    [...Array(product.countInStock).keys()].map(index => (
+                      <option key={index + 1} value={index + 1}>{index + 1}</option>
+                      ))
+                  }
+
                 </select>
-                <Button text="Add To Cart" />
+                <Button text="Add To Cart" click={addToCartHandler}/>
               </div>
             </div>
           </div>

@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 const Button = (props) => {
   return(
-    <div className="button-cta">
-      <Link to="/shop">
+    <div className="button-cta" onClick={props.click}>
+      <Link to="/cart">
         {props.text}
       </Link>
     </div>
