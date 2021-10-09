@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="hero-overlay">
         <h2 className="hero-content-h2">Find what you need with the touch of a button.</h2>
         <p>Finally, enjoy convenience&nbsp;without compromise.</p>
-        <Button text="SHOP NOW"/>
+        <Button text="SHOP NOW" path='shop'/>
       </div>
       <div className="hero-image">
         <img className="hero-image-bg" src={heroImage} alt="person wearing a white dress shirt and watch" />

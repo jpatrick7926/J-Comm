@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Button = (props) => {
   return(
     <div className="button-cta" onClick={props.click}>
-      <Link to="/cart">
+      <Link to={`/${props.path}`}>
         {props.text}
       </Link>
     </div>

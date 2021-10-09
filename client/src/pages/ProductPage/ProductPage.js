@@ -9,7 +9,7 @@ import Button from '../../components/Button/Button.js'
 import { getProductDetailsActions } from '../../redux/actions/productActions';
 import { addToCartAction } from '../../redux/actions/cartActions'
 
-const ProductPage = ({match}) => {
+const ProductPage = ({match, history}) => {
   const dispatch = useDispatch();
 
   const [ qty, setQty ] = useState(1)
@@ -23,6 +23,7 @@ const ProductPage = ({match}) => {
 
   const addToCartHandler = () => {
     dispatch(addToCartAction(product._id, qty))
+    // history.push('/cart')
   }
 
   return (
@@ -61,7 +62,7 @@ const ProductPage = ({match}) => {
                   }
 
                 </select>
-                <Button text="Add To Cart" click={addToCartHandler}/>
+                <Button text="Add To Cart" click={addToCartHandler} path='cart'/>
               </div>
             </div>
           </div>
