@@ -20,6 +20,14 @@ export const cartReducers = (state = { cartItems: [] }, action) => {
     case actionTypes.ADD_TO_CART_FAIL:
       console.log('oh I failed ima sucker')
       return { ...state }
+
+    case actionTypes.REMOVE_FROM_CART:
+
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((item, index) => item.id !== action.payload)
+      }
+
     default:
       return state
   }

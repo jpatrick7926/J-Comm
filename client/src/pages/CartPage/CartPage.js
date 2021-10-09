@@ -4,9 +4,14 @@ import { useSelector } from 'react-redux'
 // Components
 import CartItem from '../../components/CartItem/CartItem';
 
+// actions
+
+
 const CartPage = () => {
 
   const { cartItems } = useSelector(state => state.cart)
+
+
 
   return (
     <div>
@@ -14,12 +19,13 @@ const CartPage = () => {
       {
         cartItems.map(item => (
           <CartItem
-            key={item._id}
-            productId={item._id}
+            key={item.id}
+            productId={item.id}
             title={item.title}
             imageUrl={item.imageUrl}
             price={item.price}
             countInStock={item.countInStock}
+            item={item}
           />
         ))
       }
