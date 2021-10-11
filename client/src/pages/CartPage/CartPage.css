@@ -1,0 +1,15 @@
+.cartPage-container * {
+  box-sizing: border-box;
+}
+
+.cart-header {
+  width: 60%;
+  padding: 1rem;
+  display: flex;
+  background: #fff;
+  border-radius: 2px;
+  margin: 50px auto;
+  align-items: center;
+  border-bottom: 1px solid #B3B3B3;
+  color: #686868;
+}

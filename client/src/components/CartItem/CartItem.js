@@ -17,29 +17,38 @@ const CartItem = (props) => {
     dispatch(removeFromCartAction(props.productId));
   }
 
-  const changeQtyHandler = () => {
-    dispatch(addToCartAction(props.productId, qty))
-  }
+  // const changeQtyHandler = () => {
+  //   dispatch(addToCartAction(props.productId, qty))
+  // }
 
   return (
     <div className="cartitem">
       <div className='cartitem__left'>
-        <img src={props.imageUrl} alt="temp stuff"/>
+        <div className="cart-img-container">
+          <img src={props.imageUrl} alt="temp stuff"/>
+        </div>
         <div className="left__buttons">
-          <Link className="cartitem__name" to={`/product/60a9c1b2b1196c48141b8ac9`}>
-            <p>Red Converse High Tops</p>
+          <Link className="cartitem__name" to={`/product/${props.productId}`}>
+            <p>{props.title}</p>
           </Link>
           <button className="cartitem__removebtn" onClick={removeItemHandler} >Remove</button>
         </div>
       </div>
-      <p className="cartitem__price">$45.00</p>
-      <select className="cartitem__select" onChange={changeQtyHandler}>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-      <p className="cartitem__total">$45.00</p>
+      <div className="cartitem__right">
+        <div className="cartitem__price">
+          <strong>${props.price * props.qty}</strong>
+        </div>
+        <div className="cartitem__select">
+          <select>
+            <option value={props.qty}>{props.qty}</option>
+            {
+              [...Array(props.countInStock).keys()].map(index => (
+                <option key={index + 1} value={index + 1}>{index + 1}</option>
+                ))
+            }
+          </select>
+        </div>
+      </div>
     </div>
   );
 }

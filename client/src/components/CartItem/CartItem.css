@@ -1,26 +1,45 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .cartitem {
-  width: 100%;
+  width: 60%;
   padding: 1rem;
   margin-bottom: 8px;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 8px;
+  display: flex;
   background: #fff;
   border-radius: 2px;
-  place-items: center;
+  margin: auto;
+  align-items: center;
 }
 
 .cartitem__left {
-  width: 100%;
+  width: 70%;
   display: flex;
-  justify-content: space-between;
   -ms-align-items: center;
   align-items: center;
 }
 
-.cartitem__name {
+.cart-img-container {
+  max-width: 40%;
+}
+
+.cart-img-container img{
+  width: 100%;
+}
+
+.left__buttons {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.cartitem__name p {
   text-decoration: none;
   color: #cca869;
+  transition: all 0.3s ease-out;
+  border-bottom: solid 1px #fff;
+  margin-bottom: 20px;
 }
 
 .cartitem__name > p:hover {
@@ -28,7 +47,11 @@
 }
 
 .cartitem__select {
-  padding: 10px 17px;
+  margin-left: 30px;
+}
+
+.cartitem__select select {
+  padding: 10px 30px 10px 10px;
 }
 
 .cartitem__removebtn {
@@ -37,12 +60,22 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
+  text-decoration: none;
+  border-bottom: solid 1px #fff;
 }
 
-.cartitem__removebtn:hover,
-.cartitem__removebtn:focus,
-.cartitem__removebtn:active {
+.cartitem__removebtn:hover {
   border-bottom: solid 1px #cca869;
+}
+
+.cartitem__right {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.cartitem__price {
+  margin: 0 20px;
 }
 
 @media (max-width: 700px) {
