@@ -11,15 +11,13 @@ const CartItem = (props) => {
 
   const dispatch = useDispatch()
 
-
-
   const removeItemHandler = () => {
     dispatch(removeFromCartAction(props.productId));
   }
 
-  // const changeQtyHandler = () => {
-  //   dispatch(addToCartAction(props.productId, qty))
-  // }
+  const changeQtyHandler = (qty) => {
+    dispatch(addToCartAction(props.productId, qty))
+  }
 
   return (
     <div className="cartitem">
@@ -39,7 +37,7 @@ const CartItem = (props) => {
           <strong>${props.price * props.qty}</strong>
         </div>
         <div className="cartitem__select">
-          <select>
+          <select onChange={(event => {changeQtyHandler(event.target.value)})}>
             <option value={props.qty}>{props.qty}</option>
             {
               [...Array(props.countInStock).keys()].map(index => (
