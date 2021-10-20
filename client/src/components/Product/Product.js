@@ -8,7 +8,7 @@ const productContainerStyle = {
 }
 
 const imgContainerStyle = {
-  width: '100%',
+  // width: '100%',
 }
 
 const productInfoContainerStyle = {
@@ -34,7 +34,7 @@ const Product = (props) => {
     <div className="product-container" style={productContainerStyle}>
       <Link to={`/product/${props.productId}`} style={{textDecoration:'none'}}>
         <div className="img-container" style={imgContainerStyle}>
-          <img src={props.imageUrl} style={{width:"100%"}} alt="temporary alt text"/>
+          <img src={props.imageUrl} style={{height:"300px"}} alt="temporary alt text"/>
         </div>
         <div className="product-info-container" style={productInfoContainerStyle}>
           <div className="product-name" style={productNameStyle}>
