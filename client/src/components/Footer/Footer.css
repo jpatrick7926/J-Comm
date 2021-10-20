@@ -1,37 +1,32 @@
 footer {
   font-family: "roboto", sans-serif;
-  /* background-color: lavender; */
   width: 85%;
   margin: 0 auto;
   font-size: 1rem;
-  padding: 1.5em 0;
+  padding: 1.8em 0;
   text-align: center;
+  border-top: 1px solid #B3B3B3;
 }
 
 .footer-links {
   display:flex;
-  justify-content: space-between;
-  margin-top: 150px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em 0;
 }
 
-.footer-ul {
-  flex-direction: column;
-  width: 100%;
-  align-items:flex-start;
+.footer-links p {
+  font-weight: 600;
+  width: 250px;
+  padding: 1em 0;
 }
 
-.footer-li {
-  text-align: left;
-  font-weight: 300;
-  line-height: 1.6;
+.footer-links p:hover {
+  color: #F3D880;
+  cursor: pointer;
 }
 
-.footer-section h4 {
-  font-weight:700;
-  text-align: left;
-}
-
-footer p {
+footer > p {
   font-family: sans-serif;
   font-weight: 300;
   font-size: .8rem;

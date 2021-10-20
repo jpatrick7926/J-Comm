@@ -1,28 +1,23 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import './Footer.css'
 
 const Footer = () => {
   return(
     <footer>
-      <div className="footer-links">
-        <div className="footer-section">
-          <h4>Social</h4>
-        </div>
-        <div className="footer-section">
-          <h4>Contact Us</h4>
-        </div>
-        <div className="footer-section">
-          <h4>Site Links</h4>
-          <ul className="footer-ul">
-            <li className="footer-li">Home</li>
-            <li className="footer-li">Login</li>
-            <li className="footer-li">Create Account</li>
-            <li className="footer-li">Shop</li>
-            <li className="footer-li">Your Cart</li>
-          </ul>
-        </div>
+      <div className="logo">
+        <Link to="/" style={{textDecoration: 'none', color: 'black'}}>
+          <span className="logo-text">J-COMM</span>
+        </Link>
       </div>
-      <p>Copyright © 2021, J-comm.</p>
+      <div className="footer-links">
+        <Link to="/"><p>Home</p></Link>
+        <Link to="/"><p>Shop</p></Link>
+        <Link to="/"><p>Reviews</p></Link>
+        <Link to="/"><p>About</p></Link>
+        <Link to="/"><p>Your Cart</p></Link>
+      </div>
+      <p>©J-COMM. All Rights Reserved.</p>
     </footer>
   )
 }
