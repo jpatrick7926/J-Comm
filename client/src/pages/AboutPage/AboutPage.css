@@ -1,0 +1,19 @@
+.about-page-container {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-bottom: 10%;
+}
+
+.about-page-header-text p {
+  margin: 0 auto;
+  max-width: 50%;
+  min-width: 270px;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.about-page-header-text {
+  margin-bottom: 100px;
+}

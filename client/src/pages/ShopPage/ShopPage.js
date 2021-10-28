@@ -27,7 +27,7 @@ const ShopPage = () => {
     <div className="shop-container">
       <div className="shop-copytext">
         <SubHeader text="Shop"/>
-        <p>You want options? We’ve got options. From the luxe Ratio Eight and its conical physique to the no-nonsense Six, there’s a Ratio that matches your taste and temperament. Slow drinker? Add a thermal carafe. You want the form of the Six with the carafe of the Eight? Do it. Here’s everything you could ever want.</p>
+        <p>You want options? We’ve got options. From luxury jewelry, to high end monitors, and even men's and women's apparel. If you are looking for that strange combination of a purchase, then this website is exactly the place for you!</p>
         <Spacer height="100px" />
         <div className='products-container'>
           {loading ? (
