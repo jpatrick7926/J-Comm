@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const FeaturedProduct = ({ title, price, imageUrl, productId }) => {
   return (
     <Link to={`/product/${productId}`} >
-      <img src={imageUrl} alt={title}/>
+      <img className="featured_img" src={imageUrl} alt={title}/>
       <div className="featured-description">
         <div className="featured-name">
           <b>{title}</b>

@@ -13,3 +13,9 @@
 .featured-price {
   color: #666666;
 }
+
+.featured_img {
+  height: 650px;
+  max-height: 700px;
+  min-height: 650px;
+}
