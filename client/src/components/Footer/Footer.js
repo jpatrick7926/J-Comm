@@ -12,10 +12,10 @@ const Footer = () => {
       </div>
       <div className="footer-links">
         <Link to="/"><p>Home</p></Link>
-        <Link to="/"><p>Shop</p></Link>
-        <Link to="/"><p>Reviews</p></Link>
-        <Link to="/"><p>About</p></Link>
-        <Link to="/"><p>Your Cart</p></Link>
+        <Link to="/shop"><p>Shop</p></Link>
+        <Link to="/reviews"><p>Reviews</p></Link>
+        <Link to="/about"><p>About</p></Link>
+        <Link to="/cart"><p>Your Cart</p></Link>
       </div>
       <p>©J-COMM. All Rights Reserved.</p>
     </footer>
