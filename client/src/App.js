@@ -9,7 +9,7 @@ import HomePage from './pages/HomePage/HomePage';
 import ShopPage from './pages/ShopPage/ShopPage';
 import ProductPage from './pages/ProductPage/ProductPage';
 import CartPage from './pages/CartPage/CartPage';
-import RegisterPage from './pages/RegisterPage/RegisterPage';
+//import RegisterPage from './pages/RegisterPage/RegisterPage';
 import AboutPage from './pages/AboutPage/AboutPage'
 import ReviewsPage from './pages/ReviewsPage/ReviewsPage'
 
